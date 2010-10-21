@@ -52,6 +52,7 @@ result = client.Log(messages=[log_entry])
 transport.close()
 
 if result == scribe.ResultCode.OK:
+  print "OK"
   sys.exit()
 elif result == scribe.ResultCode.TRY_LATER:
   print >> sys.stderr, "TRY_LATER"
